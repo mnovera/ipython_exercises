@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+	
+	<h1>Part 1: Install Ipython</h1>
+	<h3>Part 2: Ipython Basics(Working in a Linux Terminal)</h3>
+	
+	<p><b>1.</b> IPython version 1.2.1</p>
+	<p><b>2.</b> The first output is more readable because it has created a new line.</p>
+	<p><b>3.</b> 'b.' displays: b.append, b.extend, b.insert, b.remove, b.sort, b.count, b.index, b.pop, b.reverse<br>
+	It completed the attribute after the period.</p>
+	<p><b>4.</b> 'datetime.' displays: datetime.date, datetime.MAXYEAR, datetime.timedelta, datetime.datetime, datetime.MINYEAR, datetime.tzinfo,
+datetime.datetime_CAPI, datetime.time</p>
+	<p><b>5.</b> in: b? <br>
+	out:<br>
+	Type: list<br>
+	String Form:[1, 2, 3]<br>
+	Length: 3<br>
+	Docstring:<br>
+	list() -> new empty list<br>
+	list(iterable) -> new list initialized from iterable's items<br><br>
+	It displays the general information of the object.
+	</p>
+	<p><b>6.</b> in: 'add_numbers':<br>
+	out:<br>
+	Type: function<br>
+	String Form:<function add_numbers at 0x5fad848><br>
+	File: book_scripts/<ipython-input-546-5473012eeb65><br>
+	Definition: add_numbers(a, b)<br>
+	Docstring:<br>
+	Add two numbers together<br>
+	Returns<br>
+	-------<br>
+	the_sum : type of arguments<br><br>
+	in: 'add_numbers??':<br>
+	out: <br>
+	Type: function<br>
+	String Form:<function add_numbers at 0x5fad848><br>
+	File: book_scripts/<ipython-input-546-5473012eeb65><br>
+	Definition: add_numbers(a, b)<br>
+	Source:<br>
+	&nbsp;&nbsp;def add_numbers(a, b):<br>
+	&nbsp;&nbsp;"""<br>
+	&nbsp;&nbsp;Add two numbers together<br>
+	&nbsp;&nbsp;Returns<br>
+	&nbsp;&nbsp;-------<br>
+	&nbsp;&nbsp;the_sum : type of arguments<br>
+	&nbsp;&nbsp;"""<br>
+	&nbsp;&nbsp;return a + b<br><br>
+	</p>
+	<p><b>7.</b> in: np.*load*'<br>
+	out:<br>
+	np.load<br>
+	np.loads<br>
+	np.loadtxt<br>
+	np.pkgload<br><br>	
+	It displays all the names matching the wildcard expression.
+	</p>
+	<p><b>8.</b> %run ipython_script.test.py</p>
+	<p><b>9.</b> in: 'c'<br>
+	out: 7.5<br><br>
+	in: 'result'<br>
+	out: 1.4666666666666666<br><br>
+	When the script is running, the behaviour is the same as running the program on the command line.
+	</p>
+	<p><b>10.</b> %run -i</p>
+	<p><b>11.</b> It does not work. Returns an error IndentationError: unexpected indent<br>
+	If you want to paste code into IPython, try the %paste and %cpaste
+	magic functions.</p>
+	<p><b>12.</b> The code was pasted but '%paste' has chances of not working depending on the platform and how Python was installed.<br> Using '%cpaste' is the same as the previous one but has displayed a prompt: 'Pasting code; enter '--' alone on the line to stop or use Ctrl-D.'
+	</p>
+	<p><b>13.</b> Emacs and vim have 3rd party extensions enabling some of the code to be sent directly from the text editor to the running IPython shell.</p>
+	<p><b>14.</b> 'Ctrl-P / up-arrow': Search backward in command history<br>
+	'Ctrl-N or down-arrow': Search forward in command history<br>
+	'Ctrl-R': Readline-style reverse history search<br>
+	'Ctrl-Shift-V': Paste text from clipboard<br>
+	'Ctrl-C': Interrupt currently-executing code<br>
+	'Ctrl-A': Move cursor to beginning of line<br>
+	'Ctrl-E': Move cursor to end of line<br>
+	'Ctrl-K': Delete text from cursor until end of line<br>
+	'Ctrl-U': Discard all text on current line<br>
+	'Ctrl-F': Move cursor forward one character<br>
+	'Ctrl-B': Move cursor back one character<br>
+	'Ctrl-L': Clear screen</p>
+	<p><b>15.</b>If an exception is raised, a traceback will be called.</p>
+	<p><b>16.</b>'%xmode'</p>
+	<p><b>17.</b>'%quickref' Display the IPython Quick Reference Card<br>
+	'%magic' Display detailed documentation for all of the available magic commands<br>
+	'%debug' Enter the interactive debugger at the bottom of the last exception traceback<br>
+	'%hist' Print command input (and optionally output) history<br>
+	'%pdb' Automatically enter debugger after any exception<br>
+	'%paste' Execute pre-formatted Python code from clipboard<br>
+	'%cpaste' Open a special prompt for manually pasting Python code to be executed<br>
+	'%reset' Delete all variables / names defined in interactive namespace<br>
+	'%page' OBJECT Pretty print the object and display it through a pager<br>
+	'%run' script.py Run a Python script inside IPython<br>
+	'%prun' statement Execute statement with cProfile and report the profiler output<br>
+	'%time' statement Report the execution time of single statement<br>
+	'%timeit' statement Run a statement multiple times to compute an emsemble average execution time. Useful for
+	timing code with very short execution time<br>
+	'%who, %who_ls, %whos' Display variables defined in interactive namespace, with varying levels of information / verbosity<br>
+	'%xdel' variable Delete a variable and attempt to clear any references to the object in the IPython internals</p>
+	<p><b>18.</b>in: 'a = np.random.randn(100, 100)'<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;in: '%timeit np.dot(a, a)'<br>
+	out: 10000 loops, best of 3: 69.1 us per loop</p>
+	<p><b>19.</b>in: '%reset'<br>
+	out: Resets the namespace by removing all names defined by the user.
+	&nbsp;&nbsp;Parameters
+	&nbsp;&nbsp;----------
+	&nbsp;&nbsp;-f : force reset without asking for confirmation.
+	&nbsp;&nbsp;-s : 'Soft' reset: Only clears your namespace, leaving history intact.
+	&nbsp;&nbsp;References to objects may be kept. By default (without this option),
+	&nbsp;&nbsp;we do a 'hard' reset, giving you a new session and removing all
+	&nbsp;&nbsp;references to objects from the current session.
+	&nbsp;&nbsp;Examples
+	&nbsp;&nbsp;--------
+	&nbsp;&nbsp;In [6]: a = 1
+	&nbsp;&nbsp;In [7]: a
+	&nbsp;&nbsp;Out[7]: 1
+	&nbsp;&nbsp;In [8]: 'a' in _ip.user_ns
+	&nbsp;&nbsp;Out[8]: True
+	&nbsp;&nbsp;In [9]: %reset -f
+	&nbsp;&nbsp;In [1]: 'a' in _ip.user_ns
+	&nbsp;&nbsp;Out[1]: False</p>
+	<p><b>20. Automagic is a feature where magic functions can be used without the percent sign, so long as no variable with the same name as the magic function in question is defined.</b></p>
+	
+	<h3>Part 3: Qt-based Rich GUI Console</h3>
+	<p><b>1.</b> ipython qtconsole --pylab=inline</p>
+	<p><b>2.</b> ipython qtconsole –pylab=inline</p>
+	<p><b>3.</b> Qt console can launch multiple Ipython processes in tabs, which in turn, allows you to switch between tasks. And yes, it can share a process with the Ipython HTML notebook application.</p>
+	
+	<h3>Part 4: Matpotlib Integration and Pylab Mode</h3>
+	<p><b>1.</b> ipython --pylab</p>
+	
+	
+</body>
+</html>
